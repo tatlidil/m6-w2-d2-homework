@@ -17,12 +17,14 @@ class Counter extends Component {
 
   render() {
     return (
-      <div className="text-center mt-5">
+      <div className="counter-container text-center mt-5">
         <h2>Counter</h2>
-        <span className="badge badge-primary m-2">{this.props.count}</span>
-        <button className="btn btn-danger m-2" onClick={this.decrement}>-</button>
-        <button className="btn btn-success m-2" onClick={this.increment}>+</button>
-        <button className="btn btn-warning m-2" onClick={this.reset}>reset</button>
+        <div className="counter-display bg-primary text-white p-3">
+          <span className="badge badge-light m-2">{this.props.count}</span>
+          <button className="btn btn-light m-2" onClick={this.decrement}>-</button>
+          <button className="btn btn-light m-2" onClick={this.increment}>+</button>
+          <button className="btn btn-light m-2" onClick={this.reset}>reset</button>
+        </div>
       </div>
     );
   }
